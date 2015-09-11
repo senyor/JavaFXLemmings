@@ -17,8 +17,8 @@ public class Lemming extends RigidBody implements Configuration {
         Image[] rightDirectionImageArray = new Image[4];
         Image[] leftDirectionImageArray = new Image[4];
         for (int i = 1; i <= rightDirectionImageArray.length; i++) {
-            rightDirectionImageArray[i - 1] = new Image(String.format(IMAGE_FILENAME_LEMMING, i, ""));
-            leftDirectionImageArray[i - 1] = new Image(String.format(IMAGE_FILENAME_LEMMING, i, "_i"));
+            rightDirectionImageArray[i - 1] = new Image(Lemming.class.getResourceAsStream(String.format(IMAGE_FILENAME_LEMMING, i, "")));
+            leftDirectionImageArray[i - 1] = new Image(Lemming.class.getResourceAsStream(String.format(IMAGE_FILENAME_LEMMING, i, "_i")));
         }
         staticImageRightDirection = new AnimatedImage(rightDirectionImageArray, 0.100);
         staticImageLeftDirection = new AnimatedImage(leftDirectionImageArray, 0.100);

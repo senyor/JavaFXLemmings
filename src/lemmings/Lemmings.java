@@ -7,7 +7,6 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
@@ -55,9 +54,7 @@ public class Lemmings extends Application implements Configuration {
         root.getChildren().add(canvas);
                 
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        
-        Image sun = new Image("sun.png");
-        
+                
         lemmings = new LinkedList<>();
         
         final long startNanoTime = System.nanoTime();
